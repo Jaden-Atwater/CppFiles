@@ -4,33 +4,31 @@ using namespace std;
 
 int main() 
 {
- 	string name; //string will be used for any variable with letters
-	cout << "Enter your full name: "; //asking for you to type in your name then hit enter
-	getline(cin, name); //reads the whole line
-	
- 
-	int studentID; //need a int because of numbers
-	cout << "Enter your 9 digit student ID: "; 
-	cin >> studentID;  
-	
+  string name; 
+  cout << "Enter your full name: "; 
+  getline(cin, name); 
+  
+  int studentID; 
+  cout << "Enter your 9 digit student ID: "; 
+  cin >> studentID;  
+  cin.ignore(); // add this line to ignore the newline character left in the input buffer
 
-	string classification;
-	cout << "Enter your institution level: ";  
-	getline(cin, classification);   
-	
-	 
-	string major;
-	cout << "Enter your major: ";  
-	getline(cin, major);  
-	
+  string classification;
+  cout << "Enter your institution level: ";  
+  getline(cin, classification);   
+  
+  string major;
+  cout << "Enter your major: ";  
+  getline(cin, major);  
+  
 
- 	cout << "Hi, your name is: " << endl;  
- 	cout << "You're GSU student ID is: " << endl; 
-	cout << "You're currently a: " << endl;  
-	cout << "You're studying: " << endl;  
+  cout << "Hi, your name is: " << name << endl;  
+  cout << "You're GSU student ID is: " << studentID << endl; 
+  cout << "You're currently a: " << classification << endl;  
+  cout << "You're studying: " << major << endl;  
 	
 	return 0;
-	
 }
+ 
 
  
