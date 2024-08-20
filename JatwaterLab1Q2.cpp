@@ -1,10 +1,17 @@
 //This program will compute and print out sum, difference, product, and division of 2 integers
+#include <iostream>
+using namespace std;
+ 
+int main() 
+{
+    int int1, int2;
 
-#include <stdio.h>
-
-int main() {
-    int int1 = 5;
-    int int2 = 8;
+    // Ask the user to input the integers
+	cout << "Enter first number: "; 
+	cin >> int1; 
+	  
+	cout << "Enter second number: "; 
+	cin >> int2; 
 
     // Compute the sum
     int sum = int1 + int2;
@@ -16,13 +23,13 @@ int main() {
     int product = int1 * int2;
 
     // Compute the division
-    float division = (float)int1 / int2;
+    float division = static_cast<float>(int1) / int2;
 
     // Print the results
-    printf("The sum of %d and %d is: %d\n", int1, int2, sum);
-    printf("The difference of %d and %d is: %d\n", int1, int2, difference);
-    printf("The product of %d and %d is: %d\n", int1, int2, product);
-    printf("The division of %d and %d is: %.2f\n", int1, int2, division);
+    std::cout << "The sum of " << int1 << " and " << int2 << " is: " << sum << std::endl;
+    std::cout << "The difference of " << int1 << " and " << int2 << " is: " << difference << std::endl;
+    std::cout << "The product of " << int1 << " and " << int2 << " is: " << product << std::endl;
+    std::cout << "The division of " << int1 << " and " << int2 << " is: " << division << std::endl;
 
     return 0;
 }
